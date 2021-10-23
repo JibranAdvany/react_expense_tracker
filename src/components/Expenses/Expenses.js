@@ -23,7 +23,7 @@ const Expenses = (props) => {
       <ExpensesChart expenses={filteredExpenses} />
 
       {filteredExpenses.length === 0 && (
-        <p>No expenses for the selected year.</p>
+        <p className="no-expese">No expenses for the selected year.</p>
       )}
 
       {filteredExpenses.map((expense) => (

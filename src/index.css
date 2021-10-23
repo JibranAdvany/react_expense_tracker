@@ -12,3 +12,9 @@ body {
   margin: 0;
   background-color: #3f3f3f;
 }
+
+h1 {
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
