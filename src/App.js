@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const DUMMY_DATA = [
   {
@@ -24,9 +25,16 @@ const DUMMY_DATA = [
 ];
 
 const App = () => {
+  const [data, setData] = useState(DUMMY_DATA);
+
+  const formData = (expenseData) => {
+    console.log(expenseData);
+  };
+
   return (
     <div>
       <h1>React Expense Tracker</h1>
+      <NewExpense formData={formData} />
       <Expenses data={DUMMY_DATA} />
     </div>
   );
