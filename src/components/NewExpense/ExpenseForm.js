@@ -24,8 +24,8 @@ const ExpenseForm = (props) => {
     const data = {
       id: Date.now(),
       title,
-      amount,
-      date,
+      amount: amount * 1,
+      date: new Date(date),
     };
 
     setTitle("");
@@ -66,6 +66,9 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onFormClose}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>

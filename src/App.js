@@ -28,14 +28,14 @@ const App = () => {
   const [data, setData] = useState(DUMMY_DATA);
 
   const formData = (expenseData) => {
-    console.log(expenseData);
+    setData((prevdata) => [expenseData, ...prevdata]);
   };
 
   return (
     <div>
       <h1>React Expense Tracker</h1>
       <NewExpense formData={formData} />
-      <Expenses data={DUMMY_DATA} />
+      <Expenses data={data} />
     </div>
   );
 };
